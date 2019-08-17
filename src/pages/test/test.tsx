@@ -41,6 +41,11 @@ export default class Test extends Component {
     let dom=null;
     dom=false || <Button onClick={this.clickHandle}>跳转</Button>;
     let {list}=this.state;
+    var arr = ['A', '', 'B', null, undefined, 'C', ' '];
+    var r = arr.filter(function (s) {
+    return s && s.trim(); // 注：IE9(不包含IE9)以下的版本没有trim()方法
+    });
+    arr;
     return (
       <View className='index'>
         <Image src={require('../../img/1.png')}/>
@@ -54,7 +59,7 @@ export default class Test extends Component {
         {
           dom
         }
-        
+
         {
           list.map((item,index)=>{
             return (<View key={item.id}><Text>{item.name}</Text></View>)
