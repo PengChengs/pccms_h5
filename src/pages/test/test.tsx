@@ -45,7 +45,7 @@ export default class Test extends Component {
     var r = arr.filter(function (s) {
     return s && s.trim(); // 注：IE9(不包含IE9)以下的版本没有trim()方法
     });
-    arr;
+    
     return (
       <View className='index'>
         <Image src={require('../../img/1.png')}/>
